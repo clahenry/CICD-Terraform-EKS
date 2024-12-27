@@ -54,9 +54,9 @@ module "eks" {
 }
 
 data "aws_eks_cluster" "cluster" {
- eks_cluster_id = module.eks.cluster_name
+   name = module.eks.cluster_id
 }
 
 data "aws_eks_cluster_auth" "cluster" {
- eks_cluster_id = module.eks.cluster_name
+   name = module.eks.cluster_id
 }
